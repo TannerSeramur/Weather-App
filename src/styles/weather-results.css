@@ -114,7 +114,12 @@ li.dot{
   margin: 0px 5px;
 
 }
-
+.main-content button.previous{
+background-color: red;
+}
+.main-content button.next{
+background-color: yellow;
+}
 
 
 /* ful page css */

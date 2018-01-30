@@ -179,12 +179,12 @@ handleInputChange(event) {
             <p className = 'sunset'>{ moment.unix(selectedCity.sys.sunset).format('h:mm a')}<br/> <i className="wi wi-sunset" alt="logo"></i></p>
           </div>
 
-          {this.state.allCities.length === 1 || this.state.index === 0 ? '': <button onClick = {()=>{this.setState({index: this.state.index-1})}} disabled = {this.state.index === 0}> previous </button>}
-          {this.state.allCities.length === 1 || this.state.index === this.state.allCities.length-1? '': <button onClick = {()=>{this.setState({index: this.state.index+1})}} disabled = {this.state.index === this.state.allCities.length-1}> Next </button>}
+          {this.state.allCities.length === 1 || this.state.index === 0 ? '': <button className = 'previous' onClick = {()=>{this.setState({index: this.state.index-1})}} disabled = {this.state.index === 0}> previous </button>}
+          {this.state.allCities.length === 1 || this.state.index === this.state.allCities.length-1? '': <button className = 'next' onClick = {()=>{this.setState({index: this.state.index+1})}} disabled = {this.state.index === this.state.allCities.length-1}> next </button>}
 
 
 
-        </div>
+        </div> 
 
       )
       //when loading is true, show the loadingIcon until data comes back
